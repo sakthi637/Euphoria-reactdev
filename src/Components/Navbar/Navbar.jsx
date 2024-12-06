@@ -63,14 +63,15 @@ const Navbar = () => {
             <li className="nav-item">
               <Link to="#" className="nav-link">Joggers</Link>
             </li>
-          </ul>
-
-        
-          <div className="search-bar">
+            <div className="search-bar">
             <i className="fas fa-search search-icon"></i>
             <input type="text" placeholder="Search" />
           </div>
+          </ul>
 
+        
+          
+          
           
           <div className="icons d-flex">
            

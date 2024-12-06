@@ -71,6 +71,7 @@
 .product-containers .thumbnail:hover {
   transform: scale(1.1);
   border-color: #6200ea; 
+}
 
 .product-containers .thumbnail:active {
   transform: scale(1.2);
@@ -363,5 +364,4 @@
 .chevron-up, .chevron-down {
   margin-left: 18px;
 }
-
 

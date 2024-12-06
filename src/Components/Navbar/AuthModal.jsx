@@ -161,17 +161,15 @@ const CloseButton = styled.button`
 
 const AuthModal = ({ onClose, setUser }) => {
   const [formData, setFormData] = useState({ username: '', email: '', password: '' });
-  const [isSignUp, setIsSignUp] = useState(false); 
+  const [isSignUp, setIsSignUp] = useState(false);
   const [error, setError] = useState({ username: false, email: false, password: false });
 
   const handleChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
 
-  
   const validateFields = () => {
     const newError = { username: false, email: false, password: false };
     let valid = true;
 
-    
     if (!formData.username) {
       newError.username = true;
       valid = false;
@@ -185,7 +183,8 @@ const AuthModal = ({ onClose, setUser }) => {
       valid = false;
     }
 
-    setError(newError); 
+    setError(newError);
+    return valid;
   };
 
   const handleSignUp = () => {
@@ -202,7 +201,7 @@ const AuthModal = ({ onClose, setUser }) => {
     users.push(formData);
     localStorage.setItem('users', JSON.stringify(users));
     toast.success('Sign up successful!');
-    setIsSignUp(false); 
+    setIsSignUp(false);
   };
 
   const handleSignIn = () => {
@@ -217,7 +216,7 @@ const AuthModal = ({ onClose, setUser }) => {
     );
     if (user) {
       localStorage.setItem('currentUser', formData.username);
-      setUser(formData.username); 
+      setUser(formData.username);
       toast.success('Sign in successful!');
       onClose();
     } else {
@@ -228,7 +227,6 @@ const AuthModal = ({ onClose, setUser }) => {
   return (
     <AuthModalWrapper>
       <ModalContent>
-        
         <Tabs>
           <Tab
             className={!isSignUp ? 'active' : ''}
@@ -244,7 +242,6 @@ const AuthModal = ({ onClose, setUser }) => {
           </Tab>
         </Tabs>
 
-        {/* Input Fields */}
         <FormContainer>
           <Heading>{isSignUp ? 'Create Your Account' : 'Welcome Back!'}</Heading>
           <InputGroup>
@@ -254,7 +251,7 @@ const AuthModal = ({ onClose, setUser }) => {
               placeholder="Username"
               value={formData.username}
               onChange={handleChange}
-              className={`${error.username ? 'error' : ''} ${error.username ? 'shake' : ''}`}
+              className={`${error.username ? 'error shake' : ''}`}
             />
           </InputGroup>
 
@@ -266,7 +263,7 @@ const AuthModal = ({ onClose, setUser }) => {
                 placeholder="Email"
                 value={formData.email}
                 onChange={handleChange}
-                className={`${error.email ? 'error' : ''} ${error.email ? 'shake' : ''}`}
+                className={`${error.email ? 'error shake' : ''}`}
               />
             </InputGroup>
           )}
@@ -278,7 +275,7 @@ const AuthModal = ({ onClose, setUser }) => {
               placeholder="Password"
               value={formData.password}
               onChange={handleChange}
-              className={`${error.password ? 'error' : ''} ${error.password ? 'shake' : ''}`}
+              className={`${error.password ? 'error shake' : ''}`}
             />
           </InputGroup>
 
@@ -297,7 +294,6 @@ const AuthModal = ({ onClose, setUser }) => {
           </ToggleText>
         </FormContainer>
 
-   
         <CloseButton onClick={onClose}>Close</CloseButton>
       </ModalContent>
     </AuthModalWrapper>

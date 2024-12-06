@@ -35,11 +35,6 @@ const ThirdSection = styled.section`
   margin: 50px 0px 60px -10px;
   padding: 75px;
 
-  @media only screen and (max-width: 425px) {
-    flex-direction: column;
-    padding-left: 1rem;
-    margin: 10px auto;
-  }
 
   @media only screen and (max-width: 768px) {
     flex-direction: column;
@@ -61,6 +56,23 @@ const ThirdSection = styled.section`
   @media only screen and (max-width: 1440px) {
     padding: 20px;
     margin: 20px auto;
+  }
+
+    @media only screen and (max-width: 799px) {
+    flex-direction: column;
+    margin: 20px auto;
+  }
+
+   @media only screen and (max-width: 768px) {
+    flex-direction: column;
+    padding-left: 0.9rem;
+    margin: 20px auto;
+  }
+
+    @media only screen and (max-width: 425px) {
+    flex-direction: column;
+    padding-left: 1rem;
+    margin: 10px auto;
   }
 `;
 
@@ -89,25 +101,29 @@ const Container1 = styled.div`
   border-radius: 40px;
   background-image: url('src/assets/images/main2.png');
 
-  @media only screen and (max-width: 425px) {
-    height: 300px;
-  }
-
-  @media only screen and (max-width: 768px) {
-    height: 350px;
-  }
-
-  @media only screen and (max-width: 799px) {
-    height: 300px;
-  }
-
-  @media only screen and (max-width: 1024px) {
-    height: 400px;
-  }
-
   @media only screen and (max-width: 1440px) {
     height: 420px;
   }
+
+   @media only screen and (max-width: 1024px) {
+    height: 400px;
+  }
+
+    @media only screen and (max-width: 799px) {
+    height: 300px;
+  }
+
+    @media only screen and (max-width: 768px) {
+    height: 400px;
+
+  }
+
+    @media only screen and (max-width: 425px) {
+    height: 320px;
+    width: 320px;
+    display: flex;
+  }
+
 `;
 
 const Container2 = styled.div`
@@ -123,24 +139,29 @@ const Container2 = styled.div`
   border-radius: 40px;
   background-image: url('src/assets/images/voilet2.png');
 
-  @media only screen and (max-width: 425px) {
-    height: 300px;
-  }
-
-  @media only screen and (max-width: 768px) {
-    height: 350px;
-  }
-
-  @media only screen and (max-width: 799px) {
-    height: 300px;
-  }
-
-  @media only screen and (max-width: 1024px) {
-    height: 400px;
-  }
 
   @media only screen and (max-width: 1440px) {
     height: 420px;
+  }
+
+
+   @media only screen and (max-width: 1024px) {
+    height: 400px;
+  }
+
+
+   @media only screen and (max-width: 799px) {
+    height: 300px;
+  }
+
+
+    @media only screen and (max-width: 768px) {
+    height: 350px;
+  }
+
+    @media only screen and (max-width: 425px) {
+    height: 320px;
+    width: 320px;
   }
 `;
 
@@ -172,33 +193,38 @@ const OverlayContent = styled.div`
     font-weight: bold;
   }
 
-  @media only screen and (max-width: 425px) {
+
+  @media only screen and (max-width: 1440px) {
     h1 {
-      font-size: 24px;
+      font-size: 36px;
     }
 
     h5 {
-      font-size: 16px;
+      font-size: 21px;
     }
 
     p, a {
-      font-size: 12px;
+      font-size: 15px;
     }
   }
 
-  @media only screen and (max-width: 768px) {
+
+
+    @media only screen and (max-width: 1024px) {
     h1 {
-      font-size: 28px;
+      font-size: 32px;
     }
 
     h5 {
-      font-size: 18px;
+      font-size: 20px;
     }
 
     p, a {
       font-size: 14px;
     }
   }
+
+
 
   @media only screen and (max-width: 799px) {
     h1 {
@@ -214,23 +240,10 @@ const OverlayContent = styled.div`
     }
   }
 
-  @media only screen and (max-width: 1024px) {
+
+    @media only screen and (max-width: 768px) {
     h1 {
-      font-size: 32px;
-    }
-
-    h5 {
-      font-size: 20px;
-    }
-
-    p, a {
-      font-size: 14px;
-    }
-  }
-
-  @media only screen and (max-width: 1440px) {
-    h1 {
-      font-size: 36px;
+      font-size: 33px;
     }
 
     h5 {
@@ -241,6 +254,24 @@ const OverlayContent = styled.div`
       font-size: 15px;
     }
   }
+
+
+   @media only screen and (max-width: 425px) {
+    h1 {
+      font-size: 24px;
+    }
+
+    h5 {
+      font-size: 16px;
+    }
+
+    p, a {
+      font-size: 12px;
+    }
+  }
+
+
+  
 `;
 
 export default OfferSection;

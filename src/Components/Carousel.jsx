@@ -75,24 +75,33 @@ const Hero = styled.section`
   align-items: center;
   justify-content: center;
   position: relative;
-  padding-top: 3rem;
+  padding-top: 6rem;
 `;
 
 const Main = styled.div`
   position: relative;
-  width: 100%;
-  height: 96vh;
+  width: 100vw;
+  // height: 92vh;
   align-items: center;
   justify-content: left;
   padding-left: 0;
   color: #ffffff;
   text-align: left;
+
+  @media (max-width: 768px) {
+    text-align: center;
+    // height:100vh;
+  }
 `;
 
 const CarouselWrapper = styled.div`
   position: relative;
-  height: 100%;
+  // height: 100%;
   overflow: hidden;
+
+  @media (max-width: 768px) {
+    height: 55%;
+  }
 `;
 
 const CarouselInner = styled.div`
@@ -106,6 +115,22 @@ const CarouselItem = styled.div`
   height: 960px;
   background-size: cover;
   background-position: center;
+
+  @media (max-width: 1440px) {
+    height: 790px;
+  }
+
+  @media (max-width: 1024px) {
+    height: 700px;
+  }
+
+  @media (max-width: 768px) {
+    height: 500px;
+  }
+
+  @media (max-width: 480px) {
+    height: 420px;
+  }
 `;
 
 const PrevButton = styled.button`
@@ -119,6 +144,15 @@ const PrevButton = styled.button`
   border: none;
   padding: 10px;
   cursor: pointer;
+
+
+
+   @media (max-width: 768px) {
+    font-size: 30px;
+  }
+      @media (max-width: 480px) {
+    font-size: 20px;
+  }
 `;
 
 const NextButton = styled.button`
@@ -132,6 +166,13 @@ const NextButton = styled.button`
   border: none;
   padding: 10px;
   cursor: pointer;
+
+  @media (max-width: 768px) {
+    font-size: 30px;
+  }
+     @media (max-width: 480px) {
+    font-size: 20px;
+  }
 `;
 
 const CarouselDots = styled.div`
@@ -140,6 +181,10 @@ const CarouselDots = styled.div`
   left: 50%;
   transform: translateX(-50%);
   display: flex;
+
+  @media (max-width: 480px) {
+    // bottom: 5px;
+  }
 `;
 
 const Dot = styled.span`
@@ -152,6 +197,11 @@ const Dot = styled.span`
   &.active {
     background: #512da8;
   }
+
+  @media (max-width: 480px) {
+    width: 25px;
+    height: 4px;
+  }
 `;
 
 const OverlayContent = styled.div`
@@ -160,14 +210,56 @@ const OverlayContent = styled.div`
   left: 20vh;
   font-family: "Noto Sans", sans-serif;
 
+  
+      @media (max-width: 768px) {
+      top: 18%;
+      left: 12%;
+    }
+
+     @media (max-width: 480px) {
+      top: 24%;
+      left: 15%;
+    }
+      
   h1 {
     margin: 0;
     font-size: 140px;
     color: bisque;
+
+       @media (max-width: 1440px) {
+      font-size: 100px;
+    }
+
+    @media (max-width: 1024px) {
+      font-size: 60px;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 70px;
+      
+    }
+
+    @media (max-width: 480px) {
+      font-size: 42px;
+      
+    }
   }
 
   h3 {
     font-size: 40px;
+
+    @media (max-width: 1024px) {
+      font-size: 30px;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 20px;
+      // left: 50%;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 21px;
+    }
   }
 `;
 
@@ -187,36 +279,12 @@ const ShopButton = styled.button`
   &:hover {
     background-color: #512da8;
   }
-`;
 
-
-const mediaQuery = {
-  small: '@media only screen and (min-width: 360px) and (max-width: 425px)',
-  medium: '@media only screen and (min-width: 426px) and (max-width: 768px)',
-  large: '@media only screen and (min-width: 769px) and (max-width: 799px)',
-  extraLarge: '@media only screen and (min-width: 800px) and (max-width: 1024px)',
-  xtraExtraLarge: '@media only screen and (min-width: 1025px) and (max-width: 1440px)',
-};
-
-export const HeroStyled = styled(Hero)`
-  ${mediaQuery.small} {
-    padding-top: 1rem;
-    flex-direction: column;
+  @media (max-width: 768px) {
+    font-size: 18px;
   }
 
-  ${mediaQuery.medium} {
-    padding-top: 1.5rem;
-  }
-
-  ${mediaQuery.large} {
-    padding-top: 2rem;
-  }
-
-  ${mediaQuery.extraLarge} {
-    padding-top: 2rem;
-  }
-
-  ${mediaQuery.xtraExtraLarge} {
-    padding-top: 3rem;
+  @media (max-width: 480px) {
+    font-size: 12px;
   }
 `;

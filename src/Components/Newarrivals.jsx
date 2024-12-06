@@ -98,16 +98,78 @@ const GalleryContent = styled.div`
     font-weight: bold;
     gap: 20px;
   }
+
+  @media (max-width: 1440px) {
+    padding: 30px;
+    margin-top:60px;
+  }
+
+ 
+
+  @media (max-width: 1024px) {
+    padding: 30px;
+
+    span {
+      font-size: 30px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 30px;
+    margin-top: 90px;
+
+    span {
+      font-size: 30px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 2px;
+    margin-top: 90px;
+
+    span {
+      font-size: 25px;
+      
+    }
+  }
+
+  @media (max-width: 360px) {
+    padding: 0 5px;
+
+    span {
+      font-size: 24px;
+    }
+  }
 `;
 
 const GalleryCarousel = styled.div`
-  width: 98%;
+  width: 100%;
   overflow: hidden;
+
+   @media (max-width: 1024px) {
+  margin-top: -10px;
+    }
+   @media (max-width: 900px) {
+  margin-top: -10px;
+    }
+   @media (max-width: 768px) {
+  margin-top: -10px;
+    }
+   @media (max-width: 600px) {
+  margin-top: -20px;
+    }
+
+   @media (max-width: 480px) {
+  margin-top: -30px;
+    }
+  
+  
 `;
 
 const GalleryImages = styled.div`
   display: flex;
   transition: transform 0.5s ease;
+  
 `;
 
 const GalleryItem = styled.div`
@@ -130,6 +192,100 @@ const GalleryItem = styled.div`
     font-weight: bold;
     font-family: "Urbanist", sans-serif;
   }
+
+  @media (max-width: 1440px) {
+    // min-width: 25%;
+    padding: 0 10px;
+    height: auto;
+    
+    
+
+
+  }
+
+    img {
+    width: 100%;
+    height: 390px;
+    }
+
+  @media (max-width: 1024px) {
+    min-width: 33.33%;
+    padding: 0 15px;
+  }
+
+   img {
+    width: 100%;
+    height: 360px;
+    }
+
+  @media (max-width: 768px) {
+    min-width: 50%;
+    padding: 0 10px;
+
+    p {
+      font-size: 18px;
+      margin-left: 5px;
+    }
+  }
+
+    @media (max-width: 650px) {
+    // min-width: 25%;
+    padding: 0 10px;
+    height: auto;
+    
+      img {
+    width: 100%;
+    height: 300px;
+    }
+
+
+  }
+
+  
+
+      @media (max-width: 510px) {
+    // min-width: 25%;
+    padding: 0 10px;
+    height: auto;
+    
+    
+
+
+  }
+
+    img {
+    width: 100%;
+    height: 270px;
+    
+    }
+
+
+
+  @media (max-width: 480px) {
+    // min-width: 100%;
+    // padding: 0 5px;
+
+    p {
+      font-size: 14px;
+      // margin-left: 0;
+    }
+
+
+    img {
+      width: 100%;
+      height: 200px;
+      }
+  }
+
+  @media (max-width: 360px) {
+    min-width: 100%;
+    padding: 0 5px;
+
+    p {
+      font-size: 15px;
+      margin-left: 0;
+    }
+  }
 `;
 
 const GalleryPrev = styled.button`
@@ -142,14 +298,23 @@ const GalleryPrev = styled.button`
   padding: 3px;
   cursor: pointer;
   left: 30px;
-`;
 
-const LineImage = styled.img`
-  width: 7px;
-  height: 48px;
-  display: flex;
-  padding: 6px 0;
-  margin-bottom: 20px;
+  @media (max-width: 1440px) {
+    left: 20px;
+  }
+
+  @media (max-width: 1024px) {
+    left: 20px;
+  }
+
+  @media (max-width: 768px) {
+    left: 15px;
+  }
+
+  @media (max-width: 480px) {
+    // display: none;
+    left: -6px;
+  }
 `;
 
 const GalleryNext = styled.button`
@@ -161,7 +326,48 @@ const GalleryNext = styled.button`
   border: none;
   padding: 3px;
   cursor: pointer;
-  right: 59px;
+  right: 45px;
+
+  @media (max-width: 1440px) {
+    right: 20px;
+  }
+
+  @media (max-width: 1024px) {
+    right: 20px;
+  }
+
+  @media (max-width: 768px) {
+    right: 15px;
+  }
+
+  @media (max-width: 480px) {
+    // display: none;
+    right: -6px;
+  }
 `;
+
+const LineImage = styled.img`
+  width: 7px;
+  height: 48px;
+  display: flex;
+  padding: 6px 0;
+  // margin-bottom: 20px;
+
+   @media (max-width: 480px) {
+    width: 6px;
+
+
+    height: 50px;
+    padding: 10px 0;
+    margin-top: -8px;
+}
+  @media (max-width: 360px) {
+    width: 6px;
+    height: 50px;
+    padding: 10px 0;
+    margin-top: -9px;
+  }
+`;
+
 
 export default Newarrivals;
