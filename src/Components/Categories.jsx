@@ -101,8 +101,12 @@ const CategoryCard = ({ imgSrc, title, onClick }) => (
 
 // Styled components
 const Section = styled.section`
-  padding: 80px;
+  padding: 40px; /* Reduced padding for smaller screens */
   text-align: center;
+
+  @media only screen and (min-width: 768px) {
+    padding: 80px;
+  }
 `;
 
 const LineImage = styled.span`
@@ -111,75 +115,107 @@ const LineImage = styled.span`
   gap: 10px;
 
   .line2 {
-    width: 7px;
-    height: 57px;
-    padding: 10px 0;
-    margin-top: -1px;
+    width: 5px;
+    height: 40px;
+    padding: 5px 0;
+    margin-top: 0;
+
+    @media only screen and (min-width: 768px) {
+      width: 7px;
+      height: 57px;
+      padding: 10px 0;
+    }
   }
 
   img {
-    width: 100%;
+    width: 80%; /* Adjust image width for smaller screens */
     height: auto;
+
+    @media only screen and (min-width: 768px) {
+      width: 100%;
+    }
   }
 `;
 
 const LoadingSpinner = styled.div`
-  font-size: 24px;
+  font-size: 18px; /* Smaller font for small screens */
   font-weight: bold;
   color: #000;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+
+  @media only screen and (min-width: 768px) {
+    font-size: 24px;
+  }
 `;
 
 const Content = styled.div`
   & span {
-    font-size: 33px;
-    margin-bottom: 20px;
-    padding: 0;
+    font-size: 24px; /* Smaller font for smaller screens */
+    margin-bottom: 15px;
     display: flex;
-    margin-top: -30px;
+    margin-top: -20px;
     font-family: 'Noto Sans', sans-serif;
     color: rgba(60, 66, 66, 1);
     font-weight: bold;
-    gap: 20px;
+    gap: 10px;
 
     &.women {
-      padding-top: 130px;
+      padding-top: 90px;
+
+      @media only screen and (min-width: 768px) {
+        padding-top: 130px;
+      }
+    }
+
+    @media only screen and (min-width: 768px) {
+      font-size: 33px;
+      gap: 20px;
     }
   }
 `;
 
 const Title = styled.span`
-  font-size: 33px;
-  margin-bottom: 20px;
-  padding: 0;
-  display: flex;
+  font-size: 24px; /* Adjusted font size for smaller screens */
+  margin-bottom: 15px;
   font-family: 'Noto Sans', sans-serif;
   color: rgba(60, 66, 66, 1);
   font-weight: bold;
-  gap: 20px;
 
   &.women {
-    padding-top: 90px;
+    padding-top: 60px;
+
+    @media only screen and (min-width: 768px) {
+      padding-top: 90px;
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    font-size: 33px;
   }
 `;
 
 const Row = styled.div`
   display: flex;
-  justify-content: space-around;
-  margin-bottom: 30px;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  flex-wrap: wrap; /* Default for small screens */
 
-  @media only screen and (max-width: 768px) {
-    flex-wrap: wrap;
+  @media only screen and (min-width: 768px) {
+    justify-content: space-around; /* Space cards evenly in the row */
+  }
+
+  @media only screen and (min-width: 769px) and (max-width: 1024px) {
+    justify-content: space-around;
   }
 `;
 
 const Card = styled.div`
-  flex: 1;
-  padding: 9px;
-  margin-right: 30px;
+  flex: 0 1 calc(50% - 20px);
+  padding: 5px; /* Adjusted padding for smaller screens */
+  margin: 10px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -190,41 +226,62 @@ const Card = styled.div`
   &:hover {
     transform: scale(1.05);
   }
+
+  @media only screen and (min-width: 769px) and (max-width: 1024px) {
+    flex: 0 1 calc(25% - 20px); /* 3 cards per row for tablets */
+  }
+
+  @media only screen and (min-width: 1025px) {
+    flex: 0 1 calc(25% - 40px); /* 3 cards per row for large screens */
+    margin-right: 30px;
+  }
 `;
 
 const Image = styled.img`
   width: 100%;
-  height: 390px;
+  height: 200px; /* Adjusted height for smaller screens */
   border-radius: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 
-  @media only screen and (max-width: 768px) {
-    height: 180px;
+  @media only screen and (min-width: 768px) {
+    height: 300px; /* Adjusted height for medium screens */
+  }
+
+  @media only screen and (min-width: 1025px) {
+    height: 390px; /* Adjusted height for larger screens */
+    margin-bottom: 15px;
   }
 `;
 
 const CardTitle = styled.h3`
-  font-size: 18px;
+  font-size: 16px; /* Smaller font for small screens */
   color: rgba(25, 25, 25, 1);
   margin: 5px 0;
   text-align: left;
   font-family: 'Noto Sans', sans-serif;
+
+  @media only screen and (min-width: 768px) {
+    font-size: 11px;
+  }
 `;
 
 const CardText = styled.p`
+  font-size: 15px; /* Smaller font for small screens */
   font-family: 'Noto Sans', sans-serif;
   margin: 5px 0;
   text-align: left;
-   font-size: 19px;
-   color: gray;
+  color: gray;
 
+  @media only screen and (min-width: 768px) {
+    font-size: 9px;
+  }
 `;
 
 const ArrowIcon = styled.i`
   position: absolute;
-  bottom: 18px;
-  right: 60px;
-  font-size: 19px;
+  bottom: 12px; /* Adjusted position for small screens */
+  right: 20px;
+  font-size: 16px; /* Smaller font for small screens */
   color: #666;
   transition: transform 0.3s ease, color 0.3s ease;
 
@@ -232,6 +289,13 @@ const ArrowIcon = styled.i`
     color: #000;
     transform: translateX(5px);
   }
+
+  @media only screen and (min-width: 768px) {
+    bottom: 18px;
+    right: 60px;
+    font-size: 15px;
+  }
 `;
+
 
 export default Categories;

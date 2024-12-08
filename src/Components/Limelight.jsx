@@ -39,80 +39,79 @@ const Limelight = () => {
 };
 
 
-const LimelightSection = styled.section`
-  padding: 81px;
-  background-color: #ffffff;
-  text-align: center;
-`;
+const WishRow = styled.div`
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping to next row */
+  margin: -10px; /* Adjust spacing between cards */
+  width: calc(100% + 20px); /* Compensate for negative margin */
 
-const WishContent = styled.div`
-  span {
-    font-size: 33px;
-    margin-bottom: 20px;
-    padding: 0;
-    display: flex;
-    margin-top: -30px;
-    font-family: "Noto Sans", sans-serif;
-    color: rgba(60, 66, 66, 1);
-    font-weight: bold;
-    gap: 20px;
+  justify-content: space-between;
+
+  @media only screen and (min-width: 768px) {
+    justify-content: space-around; /* Space cards evenly for larger screens */
   }
 `;
 
-const WishRow = styled.div`
-  display: flex;
-  margin: -27px;
-  width: 104%;
-  justify-content: space-between;
-`;
-
 const WishColumn = styled.div`
-  flex: 1;
+  flex: 0 1 calc(50% - 20px); /* Default: 2 cards per row */
   margin: 10px;
-  padding: 20px;
+  padding: 5px; /* Reduced padding */
   border-radius: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: space-evenly; /* Align content evenly */
+  cursor: pointer;
 
   &:hover {
     transform: scale(1.05);
   }
 
   img {
-    width: 90%;
-    height: auto;
-    // display: none;
+    width: 100%; /* Full width for images */
+    height: 200px; /* Adjusted height for small screens */
     border-radius: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+
+    @media only screen and (min-width: 768px) {
+      height: 300px; /* Medium screen adjustments */
+    }
+
+    @media only screen and (min-width: 1025px) {
+      height: 390px; /* Larger screen adjustments */
+      margin-bottom: 15px;
+    }
   }
 
   h3 {
-    font-size: 15px;
-    color: rgba(60, 66, 66, 1);
-    font-family: "Noto Sans", sans-serif;
+    font-size: 16px; /* Adjust font size */
+    color: rgba(25, 25, 25, 1);
     margin: 5px 0;
     text-align: left;
-  }
+    font-family: "Noto Sans", sans-serif;
 
-  a {
-    font-size: 14px;
-    color: rgba(128, 125, 126, 1);
-    text-decoration: none;
+    @media only screen and (min-width: 768px) {
+      font-size: 11px;
+    }
   }
 
   p {
+    font-size: 15px; /* Adjust font size */
     font-family: "Noto Sans", sans-serif;
     margin: 5px 0;
     text-align: left;
+    color: gray;
+
+    @media only screen and (min-width: 768px) {
+      font-size: 9px;
+    }
   }
 
   .dollar {
     position: absolute;
-    bottom: 30px;
-    right: 39px;
+    bottom: 12px;
+    right: 20px;
     color: #666;
     padding: 0 25px;
     font-weight: bold;
@@ -120,6 +119,11 @@ const WishColumn = styled.div`
 
     &:hover {
       transform: translateX(5px);
+    }
+
+    @media only screen and (min-width: 768px) {
+      bottom: 18px;
+      right: 60px;
     }
   }
 
@@ -140,15 +144,63 @@ const WishColumn = styled.div`
       background-color: rgba(0, 0, 0, 0.7);
     }
   }
+
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    flex: 0 1 calc(25% - 20px); /* 3 cards per row for tablets */
+  }
+
+  @media only screen and (min-width: 1025px) {
+    flex: 0 1 calc(25% - 40px); /* 3 cards per row for larger screens */
+    margin-right: 30px;
+  }
+`;
+
+const LimelightSection = styled.section`
+  padding: 40px; /* Adjust padding for small screens */
+  background-color: #ffffff;
+  text-align: center;
+
+  @media only screen and (min-width: 768px) {
+    padding: 80px; /* Larger padding for medium and large screens */
+  }
+`;
+
+const WishContent = styled.div`
+  span {
+    font-size: 24px; /* Adjust font size for smaller screens */
+    margin-bottom: 15px;
+    display: flex;
+    font-family: "Noto Sans", sans-serif;
+    color: rgba(60, 66, 66, 1);
+    font-weight: bold;
+    gap: 10px;
+
+    &.women {
+      padding-top: 60px;
+
+      @media only screen and (min-width: 768px) {
+        padding-top: 90px;
+      }
+    }
+
+    @media only screen and (min-width: 768px) {
+      font-size: 33px; /* Larger font size for tablets and desktops */
+    }
+  }
 `;
 
 const LineImage = styled.img`
-  width: 7px;
-  height: 48px;
-  display: flex;
-  padding: 6px 0;
-  margin-bottom: 20px;
-`;
+  width: 5px; /* Reduced width for small screens */
+  height: 40px; /* Adjust height for small screens */
 
+  @media only screen and (min-width: 768px) {
+    width: 7px; /* Adjustments for larger screens */
+    height: 45px;
+
+      @media only screen and (min-width: 400px) {
+    width: 7px; /* Adjustments for larger screens */
+    height: 410x;
+  }
+`;
 
 export default Limelight;

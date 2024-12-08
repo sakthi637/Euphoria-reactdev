@@ -36,11 +36,29 @@ const Section = styled.section`
   justify-content: space-between;
   padding: 90px;
   width: 100%;
+}
 
-  @media only screen and (min-width: 360px) and (max-width: 425px) {
-    flex-direction: row;
+  @media only screen and (min-width: 1025px) and (max-width: 1440px) {
     padding: 30px;
+    
+
   }
+
+  @media only screen and (min-width: 600px) and (max-width: 767px) {
+    flex-direction: column;
+    // padding: 30px;
+    }
+
+      @media only screen and (min-width: 480px) and (max-width: 599px) {
+    flex-direction: column;
+    margin-left: 0.5rem;
+  }
+
+        @media only screen and (min-width: 399px) and (max-width: 479px) {
+    flex-direction: column;
+    margin-left: 2rem;
+  }
+  
 `;
 
 const SectionContent = styled.div`
@@ -48,12 +66,35 @@ const SectionContent = styled.div`
   flex-wrap: wrap;
   width: 100%;
   margin: 0 auto;
+  padding-left:-30px;
 
-  @media only screen and (min-width: 360px) and (max-width: 425px),
-    (min-width: 426px) and (max-width: 767px) {
+
+    @media only screen and (min-width: 1025px) and (max-width: 1440px) {
+    flex-direction: row;
+    margin-right: 1.5rem;
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    flex-direction: row;
+    margin-right: 3rem;
+  }
+
+    @media only screen and (min-width: 600px) and (max-width: 767px) {
     flex-direction: column;
     margin-left: 0.5rem;
   }
+
+    @media only screen and (min-width: 480px) and (max-width: 599px) {
+    flex-direction: column;
+    margin-left: 0.5rem;
+  }
+
+      @media only screen and (min-width: 399px) and (max-width: 479px) {
+    flex-direction: column;
+    margin-left: 0.5rem;
+  }
+
+  
 `;
 
 const LeftSide = styled.div`
@@ -72,20 +113,45 @@ const LeftSide = styled.div`
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
 
-  @media only screen and (min-width: 360px) and (max-width: 425px) {
-    height: 350px;
-    width: 98%;
-    padding: 18px;
-    text-align: center;
-    border-radius: 15px 15px 0 0;
+
+  @media only screen and (min-width: 1025px) and (max-width: 1440px) {
+    height: 670px;
+    padding: 50px;
+    text-align: left;
+    border-radius: 15px 0 0 15px;
   }
-  @media only screen and (min-width: 426px) and (max-width: 767px) {
+
+   @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    height: 500px;
+    width: 100%;
+    border-radius: 15px 0 0 15px;
+    // margin-left: 1rem;
+  }
+
+    @media only screen and (min-width: 600px) and (max-width: 767px) {
     height: 400px;
     width: 100%;
-    padding: 18px;
+    padding: 95px;
     text-align: center;
     border-radius: 15px 15px 0 0;
   }
+
+    @media only screen and (min-width: 480px) and (max-width: 599px) {
+      height: 300px;
+      width: 100%;
+      padding: 50px;
+      text-align: center;
+      border-radius: 15px 15px 0 0;
+    }
+
+      @media only screen and (min-width: 399px) and (max-width: 479px) {
+      height: 300px;
+      width: 130%;
+      padding: 30px;
+      text-align: center;
+      margin-left: -3.5rem;
+      border-radius: 15px 15px 0 0;
+    }
 `;
 
 const BackgroundContent = styled.div`
@@ -97,12 +163,28 @@ const BackgroundContent = styled.div`
     margin: 0 0 20px 0;
     font-family: "Noto Sans", sans-serif;
 
-    @media only screen and (min-width: 360px) and (max-width: 425px) {
-      font-size: 21px;
+    @media only screen and (min-width: 1025px) and (max-width: 1440px) {
+      font-size: 40px;
     }
-    @media only screen and (min-width: 426px) and (max-width: 767px) {
+
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+      font-size: 20px;
+      margin-top: 2rem;
+    }
+
+      @media only screen and (min-width: 600px) and (max-width: 767px) {
       font-size: 25px;
     }
+
+        @media only screen and (min-width: 480px) and (max-width: 599px) {
+      font-size: 25px;
+    }
+
+        @media only screen and (min-width: 399px) and (max-width: 479px) {
+      font-size: 25px;
+    }
+
+     
   }
 
   p {
@@ -112,11 +194,32 @@ const BackgroundContent = styled.div`
     font-family: "Noto Sans", sans-serif;
     color: rgb(184, 179, 179);
 
-    @media only screen and (min-width: 360px) and (max-width: 425px),
-      (min-width: 426px) and (max-width: 767px) {
+    @media only screen and (min-width: 1025px) and (max-width: 1440px) {
+      font-size: 20px;
+      line-height: 1.8;
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    @media only screen and (min-width: 600px) and (max-width: 767px) {
       font-size: 15px;
       line-height: 1.4;
     }
+
+    @media only screen and (min-width: 480px) and (max-width: 599px) {
+      line-height: 1.4;
+      font-size: 15px;
+    
+  }
+
+    @media only screen and (min-width: 399px) and (max-width: 479px) {
+       line-height: 1;
+      font-size: 9px;
+    
+  }
   }
 
   .cta-button {
@@ -136,11 +239,64 @@ const BackgroundContent = styled.div`
       background-color: #14331091;
     }
 
-    @media only screen and (min-width: 360px) and (max-width: 425px),
-      (min-width: 426px) and (max-width: 767px) {
+    @media only screen and (min-width: 1025px) and (max-width: 1440px) {
+      padding: 20px 50px;
+      font-size: 21px;
+    }
+
+     @media only screen and (min-width: 768px) and (max-width: 1024px) {
       padding: 15px 30px;
       font-size: 15px;
     }
+
+       @media only screen and (min-width: 600px) and (max-width: 767px) {
+      padding: 15px 30px;
+      font-size: 15px;
+    
+  }
+
+        @media only screen and (min-width: 480px) and (max-width: 599px) {
+      padding: 15px 30px;
+      font-size: 15px;
+    
+  }
+
+         @media only screen and (min-width: 399px) and (max-width: 479px) {
+      padding: 15px 30px;
+      font-size: 15px;
+    
+  }
+
+ }
+
+   
+
+    @media only screen and (min-width: 1025px) and (max-width: 1440px) {
+      padding: 20px 50px;
+      font-size: 21px;
+    }
+
+     @media only screen and (min-width: 768px) and (max-width: 1024px) {
+      padding: 15px 30px;
+      font-size: 15px;
+    }
+
+       @media only screen and (min-width: 600px) and (max-width: 767px) {
+      padding: 15px 30px;
+      font-size: 15px;
+    
+  }
+
+        @media only screen and (min-width: 480px) and (max-width: 599px) {
+      padding: 15px 30px;
+      font-size: 15px;
+    
+  }
+
+         @media only screen and (min-width: 399px) and (max-width: 479px) {
+      padding: 15px 30px;
+      font-size: 15px;
+    
   }
 `;
 
@@ -155,14 +311,35 @@ const RightSide = styled.div`
     height: 800px;
     display: block;
 
-    @media only screen and (min-width: 360px) and (max-width: 425px) {
-      width: 104.5%;
-      height: 350px;
+
+    @media only screen and (min-width: 1025px) and (max-width: 1440px) {
+      width: 110%;
+      height: 670px;
+      border-radius: 0 15px 15px 0;
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+      width: 120%;
+      height: 500px;
+      border-radius: 0 15px 15px 0;
+    }
+
+      @media only screen and (min-width: 600px) and (max-width: 767px) {
+      width: 104%;
+      height: 510px;
       border-radius: 0 0 10px 10px;
     }
-    @media only screen and (min-width: 426px) and (max-width: 767px) {
-      width: 106%;
-      height: 400px;
+
+      @media only screen and (min-width: 480px) and (max-width: 599px) {
+      width: 105%;
+      height: 390px;
+      border-radius: 0 0 10px 10px;
+    }
+
+         @media only screen and (min-width: 399px) and (max-width: 479px) {
+      width: 126%;
+      height: 330px;
+      margin-left: -3.5rem;
       border-radius: 0 0 10px 10px;
     }
   }

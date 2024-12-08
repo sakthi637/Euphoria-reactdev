@@ -46,13 +46,13 @@ const Back = styled.section`
   margin-left: 4%;
   margin-bottom: 40px;
   height: 433px;
-  
-  @media only screen and (min-width: 360px) and (max-width: 425px) {
-    padding: 40px 15px;
-  }
 
   @media only screen and (min-width: 426px) and (max-width: 768px) {
     padding: 45px 18px;
+  }
+
+  @media only screen and (min-width: 360px) and (max-width: 425px) {
+    padding: 40px 15px;
   }
 `;
 
@@ -82,27 +82,17 @@ const BackContent = styled.div`
     color: rgba(251, 209, 3, 1);
   }
 
-  @media only screen and (min-width: 360px) and (max-width: 425px) {
+  @media only screen and (min-width: 1025px) and (max-width: 1440px) {
     h1 {
-      font-size: 28px;
+      font-size: 48px;
     }
 
     p {
-      font-size: 16px;
+      font-size: 22px;
     }
   }
 
-  @media only screen and (min-width: 426px) and (max-width: 768px) {
-    h1 {
-      font-size: 32px;
-    }
-
-    p {
-      font-size: 18px;
-    }
-  }
-
-  @media only screen and (min-width: 769px) and (max-width: 1024px) {
+    @media only screen and (min-width: 769px) and (max-width: 1024px) {
     h1 {
       font-size: 36px;
     }
@@ -112,13 +102,23 @@ const BackContent = styled.div`
     }
   }
 
-  @media only screen and (min-width: 1025px) and (max-width: 1440px) {
+    @media only screen and (min-width: 426px) and (max-width: 768px) {
     h1 {
-      font-size: 48px;
+      font-size: 32px;
     }
 
     p {
-      font-size: 22px;
+      font-size: 18px;
+    }
+  }
+
+    @media only screen and (min-width: 360px) and (max-width: 425px) {
+    h1 {
+      font-size: 28px;
+    }
+
+    p {
+      font-size: 16px;
     }
   }
 `;
@@ -142,24 +142,24 @@ const BackImage = styled.div`
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
 
-  @media only screen and (min-width: 360px) and (max-width: 425px) {
-    flex: 1 1 45%;
-    max-width: 45%;
+  @media only screen and (min-width: 1025px) and (max-width: 1440px) {
+    flex: 1 1 15%;
+    max-width: 15%;
   }
 
-  @media only screen and (min-width: 426px) and (max-width: 768px) {
-    flex: 1 1 45%;
-    max-width: 45%;
-  }
-
-  @media only screen and (min-width: 769px) and (max-width: 1024px) {
+    @media only screen and (min-width: 769px) and (max-width: 1024px) {
     flex: 1 1 20%;
     max-width: 20%;
   }
 
-  @media only screen and (min-width: 1025px) and (max-width: 1440px) {
-    flex: 1 1 15%;
-    max-width: 15%;
+   @media only screen and (min-width: 426px) and (max-width: 768px) {
+    flex: 0 1 24%;
+    max-width: 40%;
+  }
+
+    @media only screen and (min-width: 360px) and (max-width: 425px) {
+    flex: 0 1 27%;
+    max-width: 48%;
   }
 `;
 

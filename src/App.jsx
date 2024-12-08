@@ -41,17 +41,17 @@ function App() {
             <Carousel />
             <OfferSection />
             <Newarrivals />
-            <Fashion />
+             <Fashion />
              <Categories />
             <BrandDeal />
-            <Limelight />
-            <Feedback /> 
+              <Limelight />
+           {/* <Feedback />  */}
             
           </>
         } />
-       <Route path="/product/:id" element={<ProductDetail />} /> 
+       {/* <Route path="/product/:id" element={<ProductDetail />} />  */}
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </AuthContext.Provider>
   );
 }
