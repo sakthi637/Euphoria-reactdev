@@ -45,13 +45,13 @@ function App() {
              <Categories />
             <BrandDeal />
               <Limelight />
-           {/* <Feedback />  */}
+           <Feedback /> 
             
           </>
         } />
-       {/* <Route path="/product/:id" element={<ProductDetail />} />  */}
+       <Route path="/product/:id" element={<ProductDetail />} /> 
       </Routes>
-      {/* <Footer /> */}
+      <Footer />
     </AuthContext.Provider>
   );
 }

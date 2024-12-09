@@ -54,7 +54,7 @@ const WishRow = styled.div`
 
 const WishColumn = styled.div`
   flex: 0 1 calc(50% - 20px); /* Default: 2 cards per row */
-  margin: 10px;
+  margin-top: 40px;
   padding: 5px; /* Reduced padding */
   border-radius: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -63,6 +63,7 @@ const WishColumn = styled.div`
   flex-direction: column;
   justify-content: space-evenly; /* Align content evenly */
   cursor: pointer;
+  
 
   &:hover {
     transform: scale(1.05);
@@ -74,38 +75,64 @@ const WishColumn = styled.div`
     border-radius: 10px;
     margin-bottom: 10px;
 
-    @media only screen and (min-width: 768px) {
-      height: 300px; /* Medium screen adjustments */
-    }
-
     @media only screen and (min-width: 1025px) {
       height: 390px; /* Larger screen adjustments */
       margin-bottom: 15px;
     }
+
+      @media only screen and (min-width: 768px) {
+      height: 300px; /* Medium screen adjustments */
+    }
+
+      @media only screen and (min-width: 1440px) {
+      height: 500px; /* Medium screen adjustments */
+    }
   }
 
   h3 {
-    font-size: 16px; /* Adjust font size */
+    font-size: 21px; /* Adjust font size */
     color: rgba(25, 25, 25, 1);
     margin: 5px 0;
     text-align: left;
     font-family: "Noto Sans", sans-serif;
 
+
+        @media only screen and (min-width: 400px) {
+      font-size: 12px;
+    }
+
     @media only screen and (min-width: 768px) {
-      font-size: 11px;
+      font-size: 13px;
+    }
+
+     @media only screen and (min-width: 1440px) {
+      font-size: 18px;
     }
   }
 
   p {
-    font-size: 15px; /* Adjust font size */
+    font-size: 20px; /* Adjust font size */
     font-family: "Noto Sans", sans-serif;
     margin: 5px 0;
     text-align: left;
     color: gray;
+    // display: none;
 
-    @media only screen and (min-width: 768px) {
-      font-size: 9px;
+
+ 
+
+      @media only screen and (min-width: 400px) {
+      font-size: 10px;
     }
+
+       @media only screen and (min-width: 768px) {
+      font-size: 12px;
+    }
+
+         @media only screen and (min-width: 1440px) {
+      font-size: 20px;
+    }
+  
   }
 
   .dollar {
@@ -121,9 +148,21 @@ const WishColumn = styled.div`
       transform: translateX(5px);
     }
 
-    @media only screen and (min-width: 768px) {
+        @media only screen and (min-width: 400px) {
+      bottom: 6px;
+      right: -10px;
+      font-size: 12px;
+    }
+
+        @media only screen and (min-width: 768px) {
       bottom: 18px;
-      right: 60px;
+      right: 6px;
+    }
+
+        @media only screen and (min-width: 1440px) {
+      bottom: 18px;
+      right: 6px;
+      font-size: 20px;
     }
   }
 
@@ -142,6 +181,38 @@ const WishColumn = styled.div`
     &:hover {
       color: #ff0000;
       background-color: rgba(0, 0, 0, 0.7);
+    }
+
+          @media only screen and (min-width: 400px) {
+      // bottom: 18px;
+      width: 30px;
+      height: 30px;
+      padding: 6px;
+      font-size: 18px;
+      top: 24px;  
+      right: 20px;
+      
+    }
+
+        @media only screen and (min-width: 768px) {
+      // bottom: 18px;
+      width: 30px;
+      height: 30px;
+      padding: 6px;
+      font-size: 18px;
+      top: 24px;  
+      
+      
+    }
+
+        @media only screen and (min-width: 1440px) {
+      // bottom: 18px;
+      width: 50px;
+      height: 50px;
+      padding: 13px;
+      font-size: 24px;
+      top: 24px;  
+      
     }
   }
 
@@ -191,16 +262,23 @@ const WishContent = styled.div`
 
 const LineImage = styled.img`
   width: 5px; /* Reduced width for small screens */
-  height: 40px; /* Adjust height for small screens */
+  height: 40px;
+   /* Adjust height for small screens */
 
-  @media only screen and (min-width: 768px) {
-    width: 7px; /* Adjustments for larger screens */
-    height: 45px;
+    @media only screen and (min-width: 400px) {
+      width: 6px;
+      height: 33px; /* Larger adjustments for tablets and desktops */
+      margin-top: 3px;
+      }
 
-      @media only screen and (min-width: 400px) {
-    width: 7px; /* Adjustments for larger screens */
-    height: 410x;
-  }
+   @media only screen and (min-width: 768px) {
+      width: 7px;
+      height: 36px; /* Larger adjustments for tablets and desktops */
+      margin-top: 6px;
+      }
+
+ 
+
 `;
 
 export default Limelight;
