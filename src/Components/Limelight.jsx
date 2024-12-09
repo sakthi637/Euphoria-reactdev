@@ -41,27 +41,26 @@ const Limelight = () => {
 
 const WishRow = styled.div`
   display: flex;
-  flex-wrap: wrap; /* Allow wrapping to next row */
-  margin: -10px; /* Adjust spacing between cards */
-  width: calc(100% + 20px); /* Compensate for negative margin */
-
+  flex-wrap: wrap; 
+  margin: -10px; 
+  width: calc(100% + 20px); 
   justify-content: space-between;
 
   @media only screen and (min-width: 768px) {
-    justify-content: space-around; /* Space cards evenly for larger screens */
+    justify-content: space-around; 
   }
 `;
 
 const WishColumn = styled.div`
-  flex: 0 1 calc(50% - 20px); /* Default: 2 cards per row */
+  flex: 0 1 calc(50% - 20px); 
   margin-top: 40px;
-  padding: 5px; /* Reduced padding */
+  padding: 5px; 
   border-radius: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly; /* Align content evenly */
+  justify-content: space-evenly; 
   cursor: pointer;
   
 
@@ -70,27 +69,27 @@ const WishColumn = styled.div`
   }
 
   img {
-    width: 100%; /* Full width for images */
-    height: 200px; /* Adjusted height for small screens */
+    width: 100%; 
+    height: 200px; 
     border-radius: 10px;
     margin-bottom: 10px;
 
     @media only screen and (min-width: 1025px) {
-      height: 390px; /* Larger screen adjustments */
+      height: 390px; 
       margin-bottom: 15px;
     }
 
       @media only screen and (min-width: 768px) {
-      height: 300px; /* Medium screen adjustments */
+      height: 300px; 
     }
 
       @media only screen and (min-width: 1440px) {
-      height: 500px; /* Medium screen adjustments */
+      height: 500px; 
     }
   }
 
   h3 {
-    font-size: 21px; /* Adjust font size */
+    font-size: 21px;
     color: rgba(25, 25, 25, 1);
     margin: 5px 0;
     text-align: left;
@@ -111,7 +110,7 @@ const WishColumn = styled.div`
   }
 
   p {
-    font-size: 20px; /* Adjust font size */
+    font-size: 20px; 
     font-family: "Noto Sans", sans-serif;
     margin: 5px 0;
     text-align: left;
@@ -217,28 +216,28 @@ const WishColumn = styled.div`
   }
 
   @media only screen and (min-width: 768px) and (max-width: 1024px) {
-    flex: 0 1 calc(25% - 20px); /* 3 cards per row for tablets */
+    flex: 0 1 calc(25% - 20px); 
   }
 
   @media only screen and (min-width: 1025px) {
-    flex: 0 1 calc(25% - 40px); /* 3 cards per row for larger screens */
+    flex: 0 1 calc(25% - 40px); 
     margin-right: 30px;
   }
 `;
 
 const LimelightSection = styled.section`
-  padding: 40px; /* Adjust padding for small screens */
+  padding: 40px; 
   background-color: #ffffff;
   text-align: center;
 
   @media only screen and (min-width: 768px) {
-    padding: 80px; /* Larger padding for medium and large screens */
+    padding: 80px;
   }
 `;
 
 const WishContent = styled.div`
   span {
-    font-size: 24px; /* Adjust font size for smaller screens */
+    font-size: 24px; 
     margin-bottom: 15px;
     display: flex;
     font-family: "Noto Sans", sans-serif;
@@ -255,25 +254,24 @@ const WishContent = styled.div`
     }
 
     @media only screen and (min-width: 768px) {
-      font-size: 33px; /* Larger font size for tablets and desktops */
+      font-size: 33px; 
     }
   }
 `;
 
 const LineImage = styled.img`
-  width: 5px; /* Reduced width for small screens */
+  width: 5px;
   height: 40px;
-   /* Adjust height for small screens */
 
     @media only screen and (min-width: 400px) {
       width: 6px;
-      height: 33px; /* Larger adjustments for tablets and desktops */
+      height: 33px; 
       margin-top: 3px;
       }
 
    @media only screen and (min-width: 768px) {
       width: 7px;
-      height: 36px; /* Larger adjustments for tablets and desktops */
+      height: 36px; 
       margin-top: 6px;
       }
 

@@ -222,8 +222,8 @@ const ProductDetail = () => {
             </div>
           </div>
         </div>
-        <ProductDescription />
-        <Similar />
+      <ProductDescription />
+          <Similar />
       </div>
     </div>
   );

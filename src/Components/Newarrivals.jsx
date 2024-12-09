@@ -237,12 +237,7 @@ const GalleryItem = styled.div`
     width: 100%;
     height: 300px;
     }
-
-
-  }
-
-  
-
+}
       @media (max-width: 510px) {
     // min-width: 25%;
     padding: 0 10px;

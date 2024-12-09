@@ -219,7 +219,6 @@ Navigation
   border: none;
 }
 
-/* Responsive Navigation */
 @media (max-width: 1440px) {
   .container {
     padding: 0 3rem;
@@ -459,7 +458,7 @@ Navigation
     justify-content: space-between;
   }
 
-  /* Navbar items hidden by default on mobile */
+
   .nav-list {
     display: none; 
     flex-direction: column;
@@ -480,18 +479,15 @@ Navigation
     background-color: rgb(255, 255, 255);
   }
 
-
-  /* Show nav-list when hamburger is clicked */
   .nav-list.active {
     display: flex;
   }
 
-  /* Hamburger icon visible on mobile */
   .nav-center .hamburger {
-    display: block; /* Show hamburger */
+    display: block;
   }
 
-  /* Adjust nav link styles for mobile */
+
   .nav-center .nav-link, 
   .nav-center .nav-links {
     padding: 1rem 0;
@@ -499,7 +495,6 @@ Navigation
     text-align: left;
   }
 
-  /* Search bar adjustments */
   .search-bar {
     margin-right: 10px;
   }
@@ -544,14 +539,13 @@ Navigation
   }
 
 
-  /* Show nav-list when hamburger is clicked */
+  
   .nav-list.active {
     display: flex;
   }
 
-  /* Hamburger icon visible on mobile */
   .nav-center .hamburger {
-    display: block; /* Show hamburger */
+    display: block;
   }
 
   .logo img {
@@ -561,7 +555,7 @@ Navigation
   .search-bar input {
     width: 170px;
     
-    /* font-size: 10px; */
+
   }
   .search-bar {
     margin-left: 30px;
@@ -601,7 +595,6 @@ Navigation
     height: 100vh;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     z-index: 999;
-    /* padding: 1rem; */
   }
 
   .nav-list.open {
@@ -609,8 +602,6 @@ Navigation
     background-color: rgb(255, 255, 255);
   }
 
-
-  /* Show nav-list when hamburger is clicked */
   .nav-list.active {
     display: flex;
   }
@@ -619,9 +610,8 @@ Navigation
     width: 90px;
   }
 
-  /* Hamburger icon visible on mobile */
   .nav-center .hamburger {
-    display: block; /* Show hamburger */
+    display: block; 
   }
 
 }

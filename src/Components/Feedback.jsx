@@ -161,45 +161,4 @@ const Ratings = styled.div`
   color: rgba(255, 217, 0, 0.863);
 `;
 
-
-const mediaQueries = `
-  @media only screen and (min-width: 360px) and (max-width: 425px) {
-    ${FeedContent} span {
-      font-size: 24px;
-    }
-    ${FeedColumn} {
-      flex: 1 1 100%;
-      margin: 10px 0;
-    }
-    ${ProfileImage} {
-      width: 40px;
-      height: 40px;
-    }
-    ${Ratings} {
-      top: 15px;
-      right: 15px;
-    }
-    ${FeedColumn} h2 {
-      font-size: 18px;
-      margin-top: 60px;
-    }
-    ${FeedColumn} p {
-      font-size: 14px;
-    }
-  }
-
-  @media only screen and (min-width: 426px) and (max-width: 768px) {
-    ${FeedContent} span {
-      font-size: 28px;
-    }
-    ${FeedColumn} {
-      flex: 1 1 45%;
-    }
-  }
-
-  /* Add other media queries here */
-`;
-
-
-
 export default Feedback;
