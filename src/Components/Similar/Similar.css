@@ -1,13 +1,9 @@
 #wishsimilar {
-    /* padding: 110px; */
-    /* background-color: #f08282; */
     text-align: center;
     width:1470px;
-    margin-left: -650px;
+    margin-top: -170px;
   }
-  
 
-  
   .similar-content span {
     font-size: 33px;
     
@@ -25,18 +21,17 @@
     justify-content: space-between;
     flex-wrap: wrap;
     width: 100%;
-    margin-top: -20px;
+    margin-top: 20px;
     margin: 0 -27px;
 
 
     margin-bottom: 30px;
   }
   
-  .wish-column {
+  .wish-columns {
     flex: 1;
     margin: 10px;
     margin-bottom: 40px;
-    /* background-color: #f9f9f9; */
     padding: 20px;
     border-radius: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -50,7 +45,7 @@
     transform: scale(1.05);
   }
   
-  .wish-column img {
+  .wish-columns img {
     width: 100%;
     height: auto;
     display: block;
@@ -58,19 +53,28 @@
     margin-bottom: 15px;
   }
   
-  .wish-column h3,
-  .wish-column p {
+  .wish-columns h3,
+  .wish-columns p {
     font-family: "Noto Sans", sans-serif;
     margin: 5px 0;
     text-align: left;
   }
+
+  .wish-columns .dollar{
+    height:33px;
+    border: none;
+    
+    font-size: 15px;
+    background-color: #F6F6F6;
+    border-radius: 6px;
+  }
   
-  .wish-column h3 {
+  .wish-columns h3 {
     font-size: 15px;
     color: rgba(60, 66, 66, 1);
   }
   
-  .wish-column a {
+  .wish-columns a {
     font-size: 14px;
     color: rgba(128, 125, 126, 1);
     text-decoration: none;
@@ -81,15 +85,14 @@
     height: 48px;
     display: flex;
     padding: 6px 0;
-    margin-bottom: 20px;
+    margin-top: 1px;
   }
   
-  .wish-column .dollar {
+  .wish-columns .dollar {
     position: absolute;
-    bottom: 30px;
     right: 20px;
     color: #666;
-    padding: 0 25px;
+    padding: 5px 15px;
     font-weight: bold;
     transition: transform 0.3s ease, color 0.3s ease;
   }
@@ -101,7 +104,6 @@
   .wishlist-icon {
     position: absolute;
     top: 36px;
-    /* left: 278px; */
     right: 35px;
     font-size: 24px;
     color: #e0dfdf;
@@ -119,11 +121,21 @@
   
 
   @media only screen and (min-width: 360px) and (max-width: 425px) {
-    .wish-content span {
+   
+    #wishsimilar {
+      padding: 20px;
+    }
+
+    .similar-content span {
       font-size: 21px;
     }
+
+    .similar-row{
+      margin: 0;
+    }
+
   
-    .wish-column {
+    .wish-columns {
       flex: 1 1 100%;
       margin: 10px 0;
     }
@@ -131,11 +143,16 @@
     .wishlist-icon {
       top: 30px;
       left: 75%;
-      font-size: 18px;
+      font-size: 15px;
     }
   
-    .wish-content {
-      margin-top: -50px;
+    .similar-content {
+      margin-top: 10px;
+    }
+
+    .wish-columns .dollar{
+
+      padding: 6px 10px;
     }
   
     .line3 {
@@ -143,36 +160,47 @@
       height: 50px;
       padding-bottom: 3px;
       padding: 10px 0;
-      margin-top: -9px;
+      margin-top: -12px;
     }
   
-    .wish-column h3 {
+    .wish-columns h3 {
       font-size: 15px;
     }
   
-    .wish-column p {
+    .wish-columns p {
       font-size: 11px;
     }
   }
   
-  /* For screens from 426px to 768px */
   @media only screen and (min-width: 426px) and (max-width: 768px) {
-    .wish-content span {
+    .similar-content span {
       font-size: 24px;
+     padding: 20px;
     }
   
-    .wish-column {
-      flex: 1 1 45%;
+    .wish-columns {
+      flex: 1 1 40%;
     }
   
     .wishlist-icon {
-      top: 25px;
-      left: 70%;
-      font-size: 15px;
+      top: 33px;
+      left: 66%;
+      width: 33px; 
+      height: 33px;
+      font-size: 14px;
     }
   
-    .wish-content {
-      margin-top: -50px;
+    .wish-columns .dollar{
+      font-size: 10px;
+      width: 40px;
+      bottom: 10px;
+      padding: 9px 4px;
+
+    }
+
+    .similar-row{
+      margin: 0;
+      margin-top: -20px;
     }
   
     .line3 {
@@ -183,82 +211,106 @@
       margin-top: -9px;
     }
   
-    .wish-column h3 {
-      font-size: 15px;
+    .wish-columns h3 {
+      font-size: 12px;
     }
   
-    .wish-column p {
+    .wish-columns p {
       font-size: 11px;
     }
   }
-  
-  /* For screens from 769px to 1024px */
+
   @media only screen and (min-width: 769px) and (max-width: 1024px) {
     .wish-content span {
       font-size: 33px;
     }
+
+    #wishsimilar{
+      padding: 20px;
+    }
   
-    .wish-column {
+    .wish-columns {
       flex: 1 1 45%;
+    }
+
+    .similar-row{
+      margin: 0;
+      margin-top: 20px;
     }
   
     .wishlist-icon {
-      top: 28px;
-      left: 80%;
+      top: 33px;
+      left: 75%;
+      width: 40px;
+      height: 40px;
       font-size: 18px;
     }
   
-    .wish-content {
-      margin-top: -50px;
+    .similar-content {
+      margin-top: -20px;
+    }
+
+    .wish-columns .dollar{
+
+      font-size: 15px;
+      width: 80px;
+      padding: 9px 15px;
     }
   
     .line3 {
       width: 6px;
-      height: 55px;
+      height: 57px;
       padding-bottom: 3px;
       padding: 10px 0;
-      margin-top: -8px;
+      margin-top: -5px;
     }
   
-    .wish-column h3 {
+    .wish-columns h3 {
       font-size: 18px;
     }
   
-    .wish-column p {
+    .wish-columns p {
       font-size: 15px;
     }
   
-    .wish-column a {
+    .wish-columns a {
       font-size: 15px;
     }
   }
   
-  /* For screens from 1025px to 1440px */
   @media only screen and (min-width: 1025px) and (max-width: 1440px) {
-    .wish-content span {
-      font-size: 36px;
+    .similar-content span {
+      font-size: 30px;
+      margin-top: 130px;
     }
+
   
-    .wish-column {
+    .wish-columns {
       flex: 1 1 20%;
+    }
+
+
+    .wish-columns .dollar{
+
+      font-size: 10px;
+      width: 50px;
+      padding: 8px 6px;
     }
   
     .wishlist-icon {
-      top: 24px;
-      left: 72%;
-      font-size: 15px;
-    }
-  
-    .wish-column h3 {
+      top: 33px;
+      left: 66%;
+      width: 40px;
+      height: 40px;
       font-size: 18px;
     }
   
-    .wish-column p {
-      font-size: 14px;
+    .wish-columns h3 {
+      font-size: 13px;
     }
   
-    .wish-column a {
-      font-size: 12px;
+    .wish-columns p {
+      font-size: 11px;
     }
   
     .line3 {

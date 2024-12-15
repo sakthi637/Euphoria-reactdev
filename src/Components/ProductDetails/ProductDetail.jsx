@@ -161,7 +161,7 @@ const ProductDetail = () => {
         <div className="rating">
           <div className="stars">{renderStars(product.rating.rate)}</div>
           <span className="comments-icon">💬</span>
-          <span>{product.rating.count} Comments</span>
+          <span className="comments">{product.rating.count} Comments</span>
         </div>
         <div className="size-selector">
           <div className="sizess">
@@ -198,7 +198,7 @@ const ProductDetail = () => {
           <button className="add-to-cart">Add to Cart</button>
           <p className="price">${product.price}</p>
         </div>
-        <hr />
+       <hr className="division"/>
         <br />
         <div className="info">
           <div className="info-row">
@@ -222,9 +222,11 @@ const ProductDetail = () => {
             </div>
           </div>
         </div>
-      <ProductDescription />
-          <Similar />
+        
+     
       </div>
+      <ProductDescription />
+        <Similar />
     </div>
   );
 };

@@ -81,7 +81,6 @@ const Hero = styled.section`
 const Main = styled.div`
   position: relative;
   width: 100vw;
-  // height: 92vh;
   align-items: center;
   justify-content: left;
   padding-left: 0;
@@ -90,13 +89,11 @@ const Main = styled.div`
 
   @media (max-width: 768px) {
     text-align: center;
-    // height:100vh;
   }
 `;
 
 const CarouselWrapper = styled.div`
   position: relative;
-  // height: 100%;
   overflow: hidden;
 
   @media (max-width: 768px) {
@@ -107,12 +104,12 @@ const CarouselWrapper = styled.div`
 const CarouselInner = styled.div`
   display: flex;
   transition: transform 0.5s ease;
-  height: 100%;
+  height: 100;
 `;
 
 const CarouselItem = styled.div`
   min-width: 100%;
-  height: 960px;
+  height: 880px;
   background-size: cover;
   background-position: center;
 
@@ -182,9 +179,6 @@ const CarouselDots = styled.div`
   transform: translateX(-50%);
   display: flex;
 
-  @media (max-width: 480px) {
-    // bottom: 5px;
-  }
 `;
 
 const Dot = styled.span`
@@ -223,8 +217,9 @@ const OverlayContent = styled.div`
       
   h1 {
     margin: 0;
-    font-size: 140px;
-    color: bisque;
+    font-size: 98px;
+    color: #FFFFFF;
+    font-weight: 800:
 
        @media (max-width: 1440px) {
       font-size: 100px;
@@ -246,7 +241,7 @@ const OverlayContent = styled.div`
   }
 
   h3 {
-    font-size: 40px;
+    font-size: 45px;
 
     @media (max-width: 1024px) {
       font-size: 30px;
@@ -254,7 +249,6 @@ const OverlayContent = styled.div`
 
     @media (max-width: 768px) {
       font-size: 20px;
-      // left: 50%;
     }
 
     @media (max-width: 480px) {
@@ -267,7 +261,7 @@ const ShopButton = styled.button`
   display: inline-block;
   padding: 10px 20px;
   background-color: #fafafa;
-  color: #000000;
+  color: #3C4242;
   text-decoration: none;
   border-radius: 5px;
   font-size: 24px;

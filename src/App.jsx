@@ -46,7 +46,6 @@ function App() {
             <BrandDeal />
               <Limelight />
            <Feedback /> 
-            
           </>
         } />
        <Route path="/product/:id" element={<ProductDetail />} /> 

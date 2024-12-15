@@ -2,10 +2,8 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
   body {
-    overflow-y: scroll; /* Enable scrolling */
+    overflow-y: scroll; 
   }
-
-  /* Hide the scrollbar for Webkit browsers */
   ::-webkit-scrollbar {
     display: none;
   }

@@ -22,7 +22,7 @@ const ProductDescription = () => {
   return (
     <div className="product-description-container">
       <div className="description-header">
-        <ul className="description-list">
+        <div className="description-list">
           <li className="description-item">
           <span>
           <img src={lineImage} alt="line" className="line3" /> 
@@ -60,9 +60,9 @@ const ProductDescription = () => {
           <li className="product-summary">
             <p className="summary-text">{getSummaryContent()}</p>
           </li>
-        </ul>
-
-        <ul className="product-details">
+        </div>
+        
+        <div className="product-details">
           <div className="product-details-grid">
             <ul className="product-specs">
               <li className="product-spec-item">
@@ -93,7 +93,7 @@ const ProductDescription = () => {
               </li>
             </ul>
           </div>
-        </ul>
+        </div>
       </div>
       
     </div>

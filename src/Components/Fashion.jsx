@@ -40,13 +40,10 @@ const Section = styled.section`
 
   @media only screen and (min-width: 1025px) and (max-width: 1440px) {
     padding: 30px;
-    
-
   }
 
   @media only screen and (min-width: 600px) and (max-width: 767px) {
     flex-direction: column;
-    // padding: 30px;
     }
 
       @media only screen and (min-width: 480px) and (max-width: 599px) {
@@ -54,7 +51,7 @@ const Section = styled.section`
     margin-left: 0.5rem;
   }
 
-        @media only screen and (min-width: 399px) and (max-width: 479px) {
+        @media only screen and (min-width: 360px) and (max-width: 479px) {
     flex-direction: column;
     margin-left: 2rem;
   }
@@ -86,15 +83,12 @@ const SectionContent = styled.div`
 
     @media only screen and (min-width: 480px) and (max-width: 599px) {
     flex-direction: column;
-    margin-left: 0.5rem;
   }
 
-      @media only screen and (min-width: 399px) and (max-width: 479px) {
+      @media only screen and (min-width: 360px) and (max-width: 479px) {
     flex-direction: column;
-    margin-left: 0.5rem;
-  }
-
-  
+    margin-top: -4rem;
+  } 
 `;
 
 const LeftSide = styled.div`
@@ -125,29 +119,29 @@ const LeftSide = styled.div`
     height: 500px;
     width: 100%;
     border-radius: 15px 0 0 15px;
-    // margin-left: 1rem;
   }
 
     @media only screen and (min-width: 600px) and (max-width: 767px) {
     height: 400px;
-    width: 100%;
+    width: 89vw;
+    margin-left:-60px;
     padding: 95px;
     text-align: center;
     border-radius: 15px 15px 0 0;
   }
 
     @media only screen and (min-width: 480px) and (max-width: 599px) {
-      height: 300px;
-      width: 100%;
+      width: 80vw;
       padding: 50px;
+      margin-left:-40px;
       text-align: center;
       border-radius: 15px 15px 0 0;
     }
 
-      @media only screen and (min-width: 399px) and (max-width: 479px) {
+      @media only screen and (min-width: 360px) and (max-width: 479px) {
       height: 300px;
-      width: 130%;
-      padding: 30px;
+      width: 80vw;
+      padding: 50px;
       text-align: center;
       margin-left: -3.5rem;
       border-radius: 15px 15px 0 0;
@@ -158,44 +152,48 @@ const BackgroundContent = styled.div`
   position: relative;
 
   h1 {
-    font-size: 50px;
+    font-size: 40px;
     color: rgba(255, 255, 255, 1);
     margin: 0 0 20px 0;
     font-family: "Noto Sans", sans-serif;
 
     @media only screen and (min-width: 1025px) and (max-width: 1440px) {
-      font-size: 40px;
+      font-size: 30px;
     }
 
     @media only screen and (min-width: 768px) and (max-width: 1024px) {
-      font-size: 20px;
+      font-size: 25px;
       margin-top: 2rem;
     }
 
       @media only screen and (min-width: 600px) and (max-width: 767px) {
-      font-size: 25px;
+      font-size: 21px;
     }
 
         @media only screen and (min-width: 480px) and (max-width: 599px) {
       font-size: 25px;
     }
 
-        @media only screen and (min-width: 399px) and (max-width: 479px) {
-      font-size: 25px;
+        @media only screen and (min-width: 360px) and (max-width: 479px) {
+      font-size: 15px;
     }
 
      
   }
 
   p {
-    font-size: 20px;
-    line-height: 20px;
+    font-size: 21px;
+    line-height: 40px;
+    align-items: center;
+    justify-content: center;
     margin: 0 0 20px 0;
+    margin-top:30px;
     font-family: "Noto Sans", sans-serif;
-    color: rgb(184, 179, 179);
+    color:#FFFFFF ;
+    
 
     @media only screen and (min-width: 1025px) and (max-width: 1440px) {
-      font-size: 20px;
+      font-size: 15px;
       line-height: 1.8;
     }
 
@@ -205,7 +203,7 @@ const BackgroundContent = styled.div`
     }
 
     @media only screen and (min-width: 600px) and (max-width: 767px) {
-      font-size: 15px;
+      font-size: 13px;
       line-height: 1.4;
     }
 
@@ -215,7 +213,7 @@ const BackgroundContent = styled.div`
     
   }
 
-    @media only screen and (min-width: 399px) and (max-width: 479px) {
+    @media only screen and (min-width: 360px) and (max-width: 479px) {
        line-height: 1;
       font-size: 9px;
     
@@ -233,6 +231,7 @@ const BackgroundContent = styled.div`
     border: none;
     cursor: pointer;
     font-weight: bold;
+    margin-top:30px;
     transition: background-color 0.3s;
 
     &:hover {
@@ -251,7 +250,7 @@ const BackgroundContent = styled.div`
 
        @media only screen and (min-width: 600px) and (max-width: 767px) {
       padding: 15px 30px;
-      font-size: 15px;
+      font-size: 12px;
     
   }
 
@@ -261,16 +260,13 @@ const BackgroundContent = styled.div`
     
   }
 
-         @media only screen and (min-width: 399px) and (max-width: 479px) {
+    @media only screen and (min-width: 360px) and (max-width: 479px) {
       padding: 15px 30px;
-      font-size: 15px;
+      font-size: 12px;
     
   }
 
  }
-
-   
-
     @media only screen and (min-width: 1025px) and (max-width: 1440px) {
       padding: 20px 50px;
       font-size: 21px;
@@ -293,7 +289,7 @@ const BackgroundContent = styled.div`
     
   }
 
-         @media only screen and (min-width: 399px) and (max-width: 479px) {
+         @media only screen and (min-width: 360px) and (max-width: 479px) {
       padding: 15px 30px;
       font-size: 15px;
     
@@ -325,19 +321,21 @@ const RightSide = styled.div`
     }
 
       @media only screen and (min-width: 600px) and (max-width: 767px) {
-      width: 104%;
+      width: 89vw;
       height: 510px;
+      margin-left: -60px;
       border-radius: 0 0 10px 10px;
     }
 
       @media only screen and (min-width: 480px) and (max-width: 599px) {
-      width: 105%;
-      height: 390px;
+      width: 80vw;
+      height: 420px;
+      margin-left: -40px;
       border-radius: 0 0 10px 10px;
     }
 
-         @media only screen and (min-width: 399px) and (max-width: 479px) {
-      width: 126%;
+         @media only screen and (min-width: 360px) and (max-width: 479px) {
+      width: 80vw;
       height: 330px;
       margin-left: -3.5rem;
       border-radius: 0 0 10px 10px;

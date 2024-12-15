@@ -98,7 +98,7 @@ const Container1 = styled.div`
   justify-content: flex-start;
   color: #f4f7f4;
   text-align: left;
-  border-radius: 40px;
+  border-radius: 20px;
   background-image: url('src/assets/images/main2.png');
 
   @media only screen and (max-width: 1440px) {
@@ -136,7 +136,7 @@ const Container2 = styled.div`
   justify-content: flex-start;
   color: #f4f7f4;
   text-align: left;
-  border-radius: 40px;
+  border-radius: 20px;
   background-image: url('src/assets/images/voilet2.png');
 
 
@@ -172,22 +172,21 @@ const OverlayContent = styled.div`
 
   h1 {
     margin: 0;
-    font-size: 54px;
+    font-size: 44px;
   }
 
   h5 {
-    font-size: 36px;
+    font-size: 27px;
     margin: 10px 0;
   }
 
   p {
-    font-size: 24px;
-    margin: 10px 0;
+    font-size: 21px;
+    margin: 30px 0;
   }
 
   a {
-    font-size: 18px;
-    margin: 10px 0;
+    font-size: 24px;
     text-decoration: underline;
     color: white;
     font-weight: bold;
@@ -268,10 +267,7 @@ const OverlayContent = styled.div`
     p, a {
       font-size: 12px;
     }
-  }
-
-
-  
+  }  
 `;
 
 export default OfferSection;

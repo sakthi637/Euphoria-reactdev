@@ -15,7 +15,7 @@ const Feedback = () => {
       name: 'Floyd Miles',
       feedback: `Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. 
         Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. 
-        Exercitation veniam consequat sunt nostrud amet. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. 
+        
         Exercitation veniam consequat sunt nostrud amet.`,
       rating: 5,
     },
@@ -24,7 +24,7 @@ const Feedback = () => {
       name: 'Ronald Richards',
       feedback: `Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. 
         Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. 
-        Exercitation veniam consequat sunt nostrud amet. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. 
+        
         Exercitation veniam consequat sunt nostrud amet.`,
       rating: 4,
     },
@@ -33,7 +33,7 @@ const Feedback = () => {
       name: 'Savannah Nguyen',
       feedback: `Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. 
         Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. 
-        Exercitation veniam consequat sunt nostrud amet. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. 
+        
         Exercitation veniam consequat sunt nostrud amet.`,
       rating: 3,
     },
@@ -68,18 +68,19 @@ const Feedback = () => {
 
 
 const FeedbackSection = styled.section`
-  padding: 85px;
-  text-align: center;
+  padding: 45px;
+
+  @media (min-width: 768px) {
+    padding: 45px;
+  }
 `;
 
 const FeedContent = styled.div`
-  margin-top: -85px;
-
   span {
-    font-size: 33px;
+    font-size: 29px;
     margin-bottom: 20px;
     display: flex;
-    margin-top: -30px;
+    margin-top: -20px;
     font-family: "Noto Sans", sans-serif;
     color: rgba(60, 66, 66, 1);
     font-weight: bold;
@@ -88,11 +89,12 @@ const FeedContent = styled.div`
 `;
 
 const LineImage = styled.img`
-  width: 7px;
-  height: 48px;
+  width: 6px;
+  height: 46px;
   display: flex;
   padding: 6px 0;
-  margin-bottom: 20px;
+  margin-top: -4px;
+  margin-bottom: 0px;
 `;
 
 const FeedRow = styled.div`
@@ -100,11 +102,11 @@ const FeedRow = styled.div`
   justify-content: space-between;
   flex-wrap: wrap;
   margin-bottom: 30px;
-  width: 99%;
+  width: 100%;
 `;
 
 const FeedColumn = styled.div`
-  flex: 1;
+   flex: 1 1 calc(100% - 20px); 
   margin: 10px;
   background-color: rgba(255, 255, 255, 1);
   padding: 20px;
@@ -123,18 +125,46 @@ const FeedColumn = styled.div`
     box-shadow: 0 10px 20px rgba(49, 42, 42, 0.377);
   }
 
+   @media (min-width: 576px) {
+    flex: 1 1 calc(50% - 20px); 
+  }
+
+  @media (min-width: 992px) {
+    flex: 1 1 calc(33.33% - 20px); 
+  }
+
   h2 {
     font-family: "Noto Sans", sans-serif;
     font-size: 20px;
     color: rgba(60, 66, 66, 1);
     margin: 80px 0 5px;
-  }
 
+      @media (min-width: 768px) {
+      font-size: 20px;
+    }
+  }
+  @media (min-width: 360px) {
+    font-size: 16px;
   p {
     font-family: "Noto Sans", sans-serif;
     font-size: 16px;
     color: rgba(128, 125, 126, 1);
     margin: 5px 0;
+
+  @media (min-width: 360px) {
+      font-size: 12px;
+  }
+
+@media (min-width: 768px) {
+      font-size: 16px;
+  p {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 16px;
+    color: rgba(128, 125, 126, 1);
+    margin: 5px 0;
+
+  @media (min-width: 768px) {
+      font-size: 16px;
   }
 `;
 
@@ -150,6 +180,15 @@ const ProfileImage = styled.div`
     height: auto;
     border-radius: 12px;
   }
+
+  @media (min-width: 768px) {
+    width: 50px;
+    height: 50px;
+  }
+
+     @media (min-width: 360px) {
+    width: 50px;
+  }
 `;
 
 const Ratings = styled.div`
@@ -159,6 +198,11 @@ const Ratings = styled.div`
   display: flex;
   gap: 2px;
   color: rgba(255, 217, 0, 0.863);
+
+  @media (min-width: 768px) {
+    top: 20px;
+    right: 20px;
+  }
 `;
 
 export default Feedback;

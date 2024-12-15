@@ -17,7 +17,7 @@ const Similar = () => {
         </span>
         <div className="similar-row">
           {wishItems.map((item, index) => (
-            <div className="wish-column" key={index}>
+            <div className="wish-columns" key={index}>
               <i className="wishlist-icon fa fa-heart"></i>
               <img src={item.imgSrc} alt={item.imgAlt} />
               <h3>{item.title}</h3>

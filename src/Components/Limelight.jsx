@@ -74,30 +74,28 @@ const WishColumn = styled.div`
     border-radius: 10px;
     margin-bottom: 10px;
 
-    @media only screen and (min-width: 1025px) {
-      height: 390px; 
-      margin-bottom: 15px;
+    @media only screen and (min-width: 450px) {
+      height: 300px; 
     }
-
       @media only screen and (min-width: 768px) {
       height: 300px; 
     }
 
-      @media only screen and (min-width: 1440px) {
+    @media only screen and (min-width: 1440px) {
       height: 500px; 
     }
   }
 
   h3 {
     font-size: 21px;
-    color: rgba(25, 25, 25, 1);
+    color: #3C4242;
     margin: 5px 0;
     text-align: left;
     font-family: "Noto Sans", sans-serif;
 
 
-        @media only screen and (min-width: 400px) {
-      font-size: 12px;
+        @media only screen and (min-width: 360px) {
+      font-size: 10px;
     }
 
     @media only screen and (min-width: 768px) {
@@ -114,21 +112,17 @@ const WishColumn = styled.div`
     font-family: "Noto Sans", sans-serif;
     margin: 5px 0;
     text-align: left;
-    color: gray;
-    // display: none;
+    color: #807D7E;
 
-
- 
-
-      @media only screen and (min-width: 400px) {
+    @media only screen and (min-width: 360px) {
       font-size: 10px;
     }
 
-       @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: 768px) {
       font-size: 12px;
     }
 
-         @media only screen and (min-width: 1440px) {
+    @media only screen and (min-width: 1440px) {
       font-size: 20px;
     }
   
@@ -139,7 +133,11 @@ const WishColumn = styled.div`
     bottom: 12px;
     right: 20px;
     color: #666;
-    padding: 0 25px;
+    height:39px;
+    border: none;
+    background-color: #F6F6F6;
+    border-radius: 6px;
+    padding: 5px 15px;
     font-weight: bold;
     transition: transform 0.3s ease, color 0.3s ease;
 
@@ -147,32 +145,35 @@ const WishColumn = styled.div`
       transform: translateX(5px);
     }
 
-        @media only screen and (min-width: 400px) {
+        @media only screen and (min-width: 360px) {
       bottom: 6px;
-      right: -10px;
-      font-size: 12px;
+      right: 6px;
+       padding: 9px 3px;
+      font-size: 10px;
     }
 
         @media only screen and (min-width: 768px) {
-      bottom: 18px;
-      right: 6px;
+      bottom: -6px;
+      right: 1px;
+      
+      padding: 9px 1px;
+      font-size: 11px;
     }
 
         @media only screen and (min-width: 1440px) {
       bottom: 18px;
       right: 6px;
+      
       font-size: 20px;
     }
   }
-
   .wishlist-icon {
     position: absolute;
     top: 36px;
-    right: 75px;
+    right: 35px;
+    color:red;
     font-size: 24px;
-    color: #e0dfdf;
-    background-color: rgb(37, 35, 35);
-    border-radius: 50%;
+    background-color: white;
     padding: 10px;
     cursor: pointer;
     transition: color 0.3s ease, background-color 0.3s ease;
@@ -182,30 +183,26 @@ const WishColumn = styled.div`
       background-color: rgba(0, 0, 0, 0.7);
     }
 
-          @media only screen and (min-width: 400px) {
-      // bottom: 18px;
+    @media only screen and (min-width: 360px) {
+     width: 25px;
+     height:25px;
+
+      padding: 6px;
+      font-size: 15px;
+      top: 21px;  
+    }
+
+    @media only screen and (min-width: 768px) {
       width: 30px;
       height: 30px;
       padding: 6px;
       font-size: 18px;
       top: 24px;  
-      right: 20px;
+      right: 50px;
       
     }
 
-        @media only screen and (min-width: 768px) {
-      // bottom: 18px;
-      width: 30px;
-      height: 30px;
-      padding: 6px;
-      font-size: 18px;
-      top: 24px;  
-      
-      
-    }
-
-        @media only screen and (min-width: 1440px) {
-      // bottom: 18px;
+    @media only screen and (min-width: 1440px) {
       width: 50px;
       height: 50px;
       padding: 13px;
@@ -243,7 +240,7 @@ const WishContent = styled.div`
     font-family: "Noto Sans", sans-serif;
     color: rgba(60, 66, 66, 1);
     font-weight: bold;
-    gap: 10px;
+    gap: 20px;
 
     &.women {
       padding-top: 60px;
@@ -263,20 +260,16 @@ const LineImage = styled.img`
   width: 5px;
   height: 40px;
 
-    @media only screen and (min-width: 400px) {
+    @media only screen and (min-width: 360px) {
       width: 6px;
       height: 33px; 
-      margin-top: 3px;
-      }
+    }
 
    @media only screen and (min-width: 768px) {
       width: 7px;
       height: 36px; 
       margin-top: 6px;
       }
-
- 
-
 `;
 
 export default Limelight;

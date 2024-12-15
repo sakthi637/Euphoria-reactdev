@@ -20,7 +20,7 @@ const Categories = () => {
       .then((data) => {
         setMenCategories(data.filter((product) => menIds.includes(product.id)));
         setWomenCategories(data.filter((product) => womenIds.includes(product.id)));
-        setLoading(false); // Data has finished loading
+        setLoading(false); 
       });
   }, []);
 
@@ -99,9 +99,9 @@ const CategoryCard = ({ imgSrc, title, onClick }) => (
   </Card>
 );
 
-// Styled components
+
 const Section = styled.section`
-  padding: 40px; /* Reduced padding for smaller screens */
+  padding: 40px; 
   text-align: center;
 
   @media only screen and (min-width: 768px) {
@@ -138,7 +138,7 @@ const LineImage = styled.span`
 `;
 
 const LoadingSpinner = styled.div`
-  font-size: 18px; /* Smaller font for small screens */
+  font-size: 18px; 
   font-weight: bold;
   color: #000;
   display: flex;
@@ -153,32 +153,39 @@ const LoadingSpinner = styled.div`
 
 const Content = styled.div`
   & span {
-    font-size: 24px; /* Smaller font for smaller screens */
+    font-size: 24px; 
     margin-bottom: 15px;
     display: flex;
     margin-top: -20px;
     font-family: 'Noto Sans', sans-serif;
-    color: rgba(60, 66, 66, 1);
+    color: r#3C4242;
     font-weight: bold;
     gap: 10px;
 
     &.women {
-      padding-top: 90px;
-
-      @media only screen and (min-width: 768px) {
-        padding-top: 130px;
-      }
+      padding-top: 50px;
     }
 
     @media only screen and (min-width: 768px) {
-      font-size: 33px;
+      font-size: 27px;
       gap: 20px;
     }
+    @media only screen and (min-width: 360px) {
+      font-size: 21px;
+  }
+
+  @media only screen and (min-width: 768px) {
+    font-size: 27px;
+  }
+
+  @media only screen and (min-width: 1440px) {
+    font-size: 33px;
+  }
   }
 `;
 
 const Title = styled.span`
-  font-size: 24px; /* Adjusted font size for smaller screens */
+  font-size: 24px;
   margin-bottom: 15px;
   font-family: 'Noto Sans', sans-serif;
   color: rgba(60, 66, 66, 1);
@@ -195,16 +202,17 @@ const Title = styled.span`
   @media only screen and (min-width: 768px) {
     font-size: 33px;
   }
+
+  
 `;
 
 const Row = styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
-  flex-wrap: wrap; /* Default for small screens */
-
+  flex-wrap: wrap; 
   @media only screen and (min-width: 768px) {
-    justify-content: space-around; /* Space cards evenly in the row */
+    justify-content: space-around; 
   }
 
   @media only screen and (min-width: 769px) and (max-width: 1024px) {
@@ -228,60 +236,76 @@ const Card = styled.div`
   }
 
   @media only screen and (min-width: 769px) and (max-width: 1024px) {
-    flex: 0 1 calc(25% - 20px); /* 3 cards per row for tablets */
+    flex: 0 1 calc(25% - 20px); 
   }
 
   @media only screen and (min-width: 1025px) {
-    flex: 0 1 calc(25% - 40px); /* 3 cards per row for large screens */
+    flex: 0 1 calc(25% - 40px); 
     margin-right: 30px;
   }
 `;
 
 const Image = styled.img`
   width: 100%;
-  height: 200px; /* Adjusted height for smaller screens */
+  height: 200px; 
   border-radius: 10px;
   margin-bottom: 10px;
 
   @media only screen and (min-width: 768px) {
-    height: 300px; /* Adjusted height for medium screens */
+    height: 300px; 
   }
 
   @media only screen and (min-width: 1025px) {
-    height: 390px; /* Adjusted height for larger screens */
+    height: 390px; 
     margin-bottom: 15px;
   }
 `;
 
 const CardTitle = styled.h3`
-  font-size: 16px; /* Smaller font for small screens */
-  color: rgba(25, 25, 25, 1);
+  font-size: 16px; 
+  color: #3C4242;
   margin: 5px 0;
   text-align: left;
-  font-family: 'Noto Sans', sans-serif;
+ 
+
+  @media only screen and (min-width: 360px) {
+    font-size: 12px;
+  }
 
   @media only screen and (min-width: 768px) {
-    font-size: 11px;
+    font-size: 13px;
+  }
+
+    @media only screen and (min-width: 1150px) {
+    font-size: 21px;
   }
 `;
 
 const CardText = styled.p`
-  font-size: 15px; /* Smaller font for small screens */
+  font-size: 15px; 
   font-family: 'Noto Sans', sans-serif;
   margin: 5px 0;
   text-align: left;
-  color: gray;
+  color: #807D7E;
+
+  @media only screen and (min-width: 360px) {
+    font-size: 12px;
+  }
 
   @media only screen and (min-width: 768px) {
-    font-size: 9px;
+    font-size:12px;
+  }
+
+   @media only screen and (min-width: 1150px) {
+    font-size:18px;
   }
 `;
 
 const ArrowIcon = styled.i`
   position: absolute;
-  bottom: 12px; /* Adjusted position for small screens */
+  bottom: 12px; 
   right: 20px;
-  font-size: 16px; /* Smaller font for small screens */
+  font-size: 16px; 
   color: #666;
   transition: transform 0.3s ease, color 0.3s ease;
 
@@ -290,10 +314,20 @@ const ArrowIcon = styled.i`
     transform: translateX(5px);
   }
 
+  @media only screen and (min-width: 360px) {
+    font-size: 12px;
+  }
+
   @media only screen and (min-width: 768px) {
+    bottom: 15px;
+    right: 40px;
+    font-size: 12px;
+  }
+
+    @media only screen and (min-width: 1150px) {
     bottom: 18px;
     right: 60px;
-    font-size: 15px;
+    font-size: 18px;
   }
 `;
 
